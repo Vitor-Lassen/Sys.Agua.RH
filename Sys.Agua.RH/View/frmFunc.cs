@@ -7,14 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
-namespace Sys.Agua.RH
+namespace Sys.Agua.RH.View
 {
-    public partial class Form1 : Form
+    public partial class frmFunc : MetroForm
     {
-        public Form1()
+        public frmFunc(frmMain frmMain)
         {
             InitializeComponent();
+            this.StyleManager = frmMain.msm;
         }
     }
 }
