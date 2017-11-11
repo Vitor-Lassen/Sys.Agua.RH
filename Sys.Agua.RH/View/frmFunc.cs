@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using MetroFramework.Components;
 
 namespace Sys.Agua.RH.View
 {
@@ -16,7 +17,34 @@ namespace Sys.Agua.RH.View
         public frmFunc(frmMain frmMain)
         {
             InitializeComponent();
-            this.StyleManager = frmMain.msm;
+            MetroStyleManager msm = frmMain.msm;
+            msm.Owner = this;
+            this.StyleManager = msm;
+        }
+
+        private void frmFunc_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTextBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

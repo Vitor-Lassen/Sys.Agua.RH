@@ -78,6 +78,9 @@
     <Compile Include="View\frmSettings.Designer.cs">
       <DependentUpon>frmSettings.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmFunc.resx">
+      <DependentUpon>frmFunc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +119,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user-silhouette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_save_1608823.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_icon-ios7-people_211793.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\211793-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2102048-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\326535-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\216190-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teste.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
