@@ -42,6 +42,7 @@
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -54,6 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\FuncionarioRepository.cs" />
+    <Compile Include="DataBase\Connection.cs" />
+    <Compile Include="Model\Funcionario.cs" />
     <Compile Include="View\frmFunc.cs">
       <SubType>Form</SubType>
     </Compile>
