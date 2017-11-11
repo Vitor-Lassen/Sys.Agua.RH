@@ -13,7 +13,7 @@ namespace Sys.Agua.RH.DAL
     {
         public SqlCommand insertFun (Funcionario func)
         {
-            SqlCommand cmd = new SqlCommand("exec [Sys.Agua.RH.Funcionario.Insert.NewFunc]");
+            SqlCommand cmd = new SqlCommand("exec [Sys.Agua.RH.Funcionario.Insert.NewFunc] @nome_func,@cpf_func,@banco,@cont_banco_func,@agencia_banco_func,@salario_func,@codSetor_func,@dataAdm,@cod_func");
             cmd.Parameters.AddWithValue("@nome_func", func.nomeFunc);
             cmd.Parameters.AddWithValue("@cpf_func", func.cpfFunc);
             cmd.Parameters.AddWithValue("@banco", func.nomeFunc);
@@ -27,7 +27,7 @@ namespace Sys.Agua.RH.DAL
         }
         public SqlCommand updateFun(Funcionario func)
         {
-            SqlCommand cmd = new SqlCommand("exec [Sys.Agua.RH.Funcionario.Update.AtuaFunc]");
+            SqlCommand cmd = new SqlCommand("exec [Sys.Agua.RH.Funcionario.Update.AtuaFunc] @nome_func,@cpf_func,@banco,@cont_banco_func,@agencia_banco_func,@salario_func,@codSetor_func,@dataAdm,@cod_func");
             cmd.Parameters.AddWithValue("@nome_func", func.nomeFunc);
             cmd.Parameters.AddWithValue("@cpf_func", func.cpfFunc);
             cmd.Parameters.AddWithValue("@banco", func.nomeFunc);
@@ -39,9 +39,9 @@ namespace Sys.Agua.RH.DAL
             cmd.Parameters.AddWithValue("@cod_func", func.CodFunc);
             return cmd;
         }
-        public SqlCommand selecFunc (string campo, string value)
+        public SqlCommand selectFunc (string campo, string value)
         {
-            SqlCommand cmd = new SqlCommand("elect cod_func as 'Código', cpf_func as 'CPF', nome_func as 'Nome' from db_RH.dbo.funcionario where "+campo+" like '%" + value +"%'");
+            SqlCommand cmd = new SqlCommand("select cod_func as 'Código', cpf_func as 'CPF', nome_func as 'Nome' from db_RH.dbo.funcionario where "+campo+" like '%" + value +"%'");
             return cmd;
         }
     }
